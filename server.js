@@ -21,7 +21,7 @@ class Usuario {
 
 console.log(new Usuario());
 
-app.get("/api/users", (req, res) => {
+app.get("/api/users/new", (req, res) => {
     res.json( new usuarios ());
 });
 
@@ -45,11 +45,11 @@ class Compañia{
 }
 console.log(new Compañia());
 
-app.get("/api/compania/nuevo", (req, res) => {
+app.get("/api/companies/new", (req, res) => {
     res.json( new Compañia() );
 });
 
-app.get("/api/usuario/compania", (req, res) => {
+app.get("/api/user/company", (req, res) => {
     let newUsuario = new Usuario();
     let newCompañia = new Compañia();
     let usuarioCompañia = Object.assign(newUsuario,  newCompañia);
